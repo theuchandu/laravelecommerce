@@ -34,8 +34,10 @@
                        
                         @if (Route::has('login'))
                           @auth
-                          <x-app-layout>    
-                         </x-app-layout>
+                          <li class = "navb-item">
+                              <x-app-layout>    
+                              </x-app-layout>
+                         </li>
                            @else  
                               <li class="nav-item">
                                  <a  class="btn btn-primary" href="{{ route('login') }}" id ="logincss">Login</a>
