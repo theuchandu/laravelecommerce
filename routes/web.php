@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController; 
+use App\Http\Controllers\AdminController; 
 
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/view_catagory', [AdminController::class, 'view_catagory']);
+Route::post('/add_catagory', [AdminController::class, 'add_catagory']);
+
